@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+.selectors {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 5px;
+}
+
+#menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.day {
+  background: #eef;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.day h3 {
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.meal {
+  margin-bottom: 10px;
+}
+
+.meal label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+textarea {
+  min-width: 50px;  /* Set a minimum width */
+  max-width: 100%;  /* Prevent overflowing container */
+  width: auto;      /* Allow dynamic width adjustments */
+  height: 50px;     /* Default height */
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;     /* Prevent manual resizing */
+  overflow: hidden; /* Hide scrollbars */
+  box-sizing: border-box;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Print styles */
+@media print {
+  body {
+      background: white;
+      color: black;
+      margin: 0;
+      padding: 0;
+  }
+
+  .container {
+      box-shadow: none;
+      border-radius: 0;
+      width: 100%;
+  }
+
+  .selectors, .buttons {
+      display: none; /* Hide selectors and buttons during printing */
+  }
+
+  #menu {
+      grid-template-columns: repeat(4, 1fr); /* Ensure 7 equal columns for each day */
+      grid-template-rows: repeat(2, 1fr);
+      gap: 0.5rem; /* Add spacing between columns */
+  }
+
+  .day {
+      page-break-inside: avoid; /* Prevent splitting days across pages */
+      height: auto; /* Ensure the boxes grow dynamically */
+      overflow: visible; /* Prevent scrollbars and display all content */
+      text-align: center;
+      font-size: 0.9rem;
+  }
+
+  .day * {
+      white-space: normal; /* Wrap long lines of text */
+      overflow: visible;
+      display: block;
+  }
+}

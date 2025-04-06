@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Menu Planner</title>
+  <link rel="stylesheet" href="calender.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Weekly Menu Planner</h1>
+    <div class="selectors">
+      <label for="month">Month:</label>
+      <select id="month"></select>
+
+      <label for="year">Year:</label>
+      <select id="year"></select>
+
+      <label for="week">Week:</label>
+      <select id="week">
+        <option value="1">Week 1</option>
+        <option value="2">Week 2</option>
+        <option value="3">Week 3</option>
+        <option value="4">Week 4</option>
+        <option value="5">Week 5</option>
+      </select>
+    </div>
+    <div id="menu"></div>
+    <div class="buttons">
+      <button id="saveMenu">Save Menu</button>
+      <button id="loadMenu">Load Menu</button>
+      <button id="printMenu">Print Menu</button>
+    </div>
+  </div>
+  <script src="calender.js"></script>
+</body>
+</html>
